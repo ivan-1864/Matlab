@@ -1,1 +1,26 @@
+This packege includes 2 methods of GDV estimation:
+1. Estimation GDV as time dependent function
+2. Estimation GDV as coordinate dependent function
+
+How to use:
+Open derectory "Data"
+Choose numbers of lines in Data/Program/cfg.m (AllGals in [1, ..., 7])
+Run "Make_IMU_data.m" and "Make_GPS_data.m"
+
+Open derectory "INS"
+Run "INS/Program/INS_algorithm.m"
+
+Than you have a choice:
+a) if you want to have GDV as func. of t:
+  Open derectory "DFK_t"
+  Choose numbers of splines in "DFK_t/Program/cfg.m" (default 25 on 1 lines), need to multiplicate to number of lines!
+  Run "DFK_t/Program/QFK_QR.m"
+  See results in "DFK_t/Program/show_anomaly.m" (havn't debugged yet)
+
+b) if you want to have GDV as func. of s:
+  Open derectory "DFK_s"
+  Choose numbers of splines in "DFK_s/Program/cfg.m" (default 25 on 1 lines), no need to multiplicate to number of lines!
+  Run "DFK_s/Program/QFK_QR.m"
+  See results in "DFK_t/Program/show_anomaly.m" (havn't debugged yet)
+
 
